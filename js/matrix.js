@@ -21,7 +21,7 @@ class Star {
         this.y = Math.random() * canvas.height;
         this.z = Math.random() * 1000;
         this.size = Math.random() * 2;
-        this.speed = Math.random() * 5 + 1;
+        this.speed = Math.random() * 15 + 5;
         this.color = `rgba(255, 255, 255, ${Math.random() * 0.8 + 0.2})`;
     }
 
@@ -57,9 +57,9 @@ function drawHyperspace() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Draw speed lines
-    ctx.strokeStyle = 'rgba(100, 100, 255, 0.1)';
+    ctx.strokeStyle = 'rgba(100, 100, 255, 0.15)';
     ctx.lineWidth = 2;
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 30; i++) {
         const x = Math.random() * canvas.width;
         ctx.beginPath();
         ctx.moveTo(x, 0);
