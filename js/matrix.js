@@ -61,37 +61,16 @@ function drawHyperspace() {
     const centerY = canvas.height / 2;
     const maxRadius = Math.max(canvas.width, canvas.height);
     
-    // Create tunnel effect
-    for (let i = 0; i < 5; i++) {
-        const radius = (maxRadius * (i + 1)) / 5;
+    // Create tunnel effect with more rings for smoother transition
+    for (let i = 0; i < 10; i++) {
+        const radius = (maxRadius * (i + 1)) / 10;
         const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
-        gradient.addColorStop(0, 'rgba(100, 100, 255, 0.1)');
+        gradient.addColorStop(0, 'rgba(100, 100, 255, 0.05)');
         gradient.addColorStop(1, 'rgba(100, 100, 255, 0)');
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
         ctx.fill();
-    }
-
-    // Draw light streaks
-    for (let i = 0; i < 15; i++) {
-        const angle = (Math.PI * 2 * i) / 15;
-        const length = Math.random() * 100 + 50;
-        const startX = centerX + Math.cos(angle) * 50;
-        const startY = centerY + Math.sin(angle) * 50;
-        const endX = startX + Math.cos(angle) * length;
-        const endY = startY + Math.sin(angle) * length;
-        
-        const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
-        gradient.addColorStop(0, 'rgba(100, 100, 255, 0.2)');
-        gradient.addColorStop(1, 'rgba(100, 100, 255, 0)');
-        
-        ctx.strokeStyle = gradient;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(startX, startY);
-        ctx.lineTo(endX, endY);
-        ctx.stroke();
     }
 
     // Update and draw stars
