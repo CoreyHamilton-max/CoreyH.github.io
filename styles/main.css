@@ -268,19 +268,15 @@ body {
 }
 
 .tech-tag {
-    background: rgba(0, 168, 255, 0.1);
     color: var(--cyber-blue);
     padding: 0.5rem 1rem;
-    border: 1px solid var(--cyber-blue);
-    border-radius: 4px;
     font-family: 'Source Code Pro', monospace;
     font-size: 0.9rem;
     transition: all 0.3s ease;
 }
 
 .tech-tag:hover {
-    background: rgba(0, 168, 255, 0.2);
-    box-shadow: 0 0 10px rgba(0, 168, 255, 0.3);
+    color: var(--cyber-blue-dim);
     transform: translateY(-2px);
 }
 
