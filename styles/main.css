@@ -92,22 +92,139 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .content-wrapper {
+        padding: 0 15px;
+    }
+
+    .matrix-glow {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    h2.text-light {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skills-container {
+        gap: 0.8rem;
+        margin: 1.5rem auto;
+    }
+
+    .skill-category {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-category h4 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .tech-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
     .cyber-card {
         margin: 1rem 0;
+        padding: 1.2rem;
     }
-    
+
+    .cyber-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .project-desc {
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+    }
+
     .tech-stack {
-        flex-direction: row;
-        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin: 0.8rem 0;
     }
-    
+
+    .feature-list {
+        margin: 0.8rem 0;
+    }
+
+    .feature-item {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+
     .card-links {
-        flex-direction: column;
+        margin-top: 1.2rem;
     }
-    
-    .cyber-btn {
-        width: 100%;
-        text-align: center;
+
+    .download-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Contact form mobile adjustments */
+    .contact-form {
+        padding: 15px;
+    }
+
+    .cyber-input {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .contact-form textarea {
+        min-height: 100px;
+    }
+
+    .contact-form .download-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Container adjustments */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .row {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .col-lg-6 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* Additional small screen adjustments */
+@media (max-width: 480px) {
+    .matrix-glow {
+        font-size: 1.8rem;
+    }
+
+    h2.text-light {
+        font-size: 1.1rem;
+    }
+
+    .cyber-card {
+        padding: 1rem;
+    }
+
+    .cyber-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .tech-tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    .feature-item {
+        font-size: 0.75rem;
     }
 }
 
