@@ -10,28 +10,74 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-// Matrix rain settings
-const fontSize = 14;
-const columns = Math.floor(canvas.width / fontSize);
-const drops = new Array(columns).fill(1);
-const chars = "10".split("");
+// Star class for hyperspace effect
+class Star {
+    constructor() {
+        this.reset();
+    }
 
-function draw() {
-    ctx.fillStyle = 'rgba(10, 25, 47, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.z = Math.random() * 1000;
+        this.size = Math.random() * 2;
+        this.speed = Math.random() * 5 + 1;
+        this.color = `rgba(255, 255, 255, ${Math.random() * 0.8 + 0.2})`;
+    }
 
-    ctx.fillStyle = '#00a8ff';  // Ensuring matrix rain is cyber blue
-    ctx.font = fontSize + 'px monospace';
-
-    for (let i = 0; i < drops.length; i++) {
-        const text = chars[Math.floor(Math.random() * chars.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
+    update() {
+        this.z -= this.speed;
+        if (this.z <= 0) {
+            this.reset();
         }
-        drops[i]++;
+    }
+
+    draw() {
+        const x = (this.x - canvas.width / 2) * (1000 / this.z) + canvas.width / 2;
+        const y = (this.y - canvas.height / 2) * (1000 / this.z) + canvas.height / 2;
+        const size = this.size * (1000 / this.z);
+        
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.fill();
     }
 }
 
-setInterval(draw, 33);
+// Create stars
+const stars = Array(200).fill().map(() => new Star());
+
+// Hyperspace effect
+function drawHyperspace() {
+    // Create gradient background
+    const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    gradient.addColorStop(0, 'rgba(10, 0, 30, 0.8)');
+    gradient.addColorStop(1, 'rgba(30, 0, 50, 0.8)');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Draw speed lines
+    ctx.strokeStyle = 'rgba(100, 100, 255, 0.1)';
+    ctx.lineWidth = 2;
+    for (let i = 0; i < 20; i++) {
+        const x = Math.random() * canvas.width;
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+    }
+
+    // Update and draw stars
+    stars.forEach(star => {
+        star.update();
+        star.draw();
+    });
+}
+
+// Use requestAnimationFrame for smooth animation
+function animate() {
+    drawHyperspace();
+    requestAnimationFrame(animate);
+}
+
+animate();
