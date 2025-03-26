@@ -38,7 +38,7 @@ body {
 
 .project-desc {
     font-size: 0.9rem;
-    color: #ffffff;
+    color: #ffffff;  /* Making description text white */
     margin-bottom: 1rem;
     line-height: 1.4;
 }
@@ -50,13 +50,13 @@ body {
 }
 
 .feature-item {
-    color: #b3e0ff;
+    color: var(--cyber-blue);  /* Changed from green to blue */
     margin-bottom: 0.5rem;
     transition: color 0.3s ease;
 }
 
 .feature-item:hover {
-    color: var(--cyber-blue);
+    color: var(--cyber-blue-dim);
 }
 
 .cyber-card h3 {
@@ -87,7 +87,7 @@ body {
 }
 
 .cyber-card:hover .feature-item {
-    color: rgba(0, 255, 0, 0.9);
+    color: var(--cyber-blue);  /* Changed from green to blue */
 }
 
 /* Responsive adjustments */
@@ -138,23 +138,28 @@ body {
     transform: translateY(-2px);
 }
 
+/* Updated download button styling */
 .download-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background: rgba(0, 168, 255, 0.1);
-    color: var(--cyber-blue);
-    border: 1px solid var(--cyber-blue);
-    border-radius: 4px;
+    background: var(--cyber-blue);  /* Solid blue background */
+    color: #ffffff;  /* White text */
+    border: none;
+    border-radius: 25px;  /* Rounded corners */
     text-decoration: none;
     font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
     transition: all 0.3s ease;
     width: 100%;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .download-btn:hover {
-    background: rgba(0, 168, 255, 0.2);
+    background: var(--cyber-blue-dim);
     color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
     text-decoration: none;
+    transform: translateY(-2px);
 }

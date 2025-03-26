@@ -17,10 +17,10 @@ const drops = new Array(columns).fill(1);
 const chars = "10".split("");
 
 function draw() {
-    ctx.fillStyle = 'rgba(10, 25, 47, 0.05)';  // Updated background color
+    ctx.fillStyle = 'rgba(10, 25, 47, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = '#00a8ff';  // Updated to cyber blue
+    ctx.fillStyle = '#00a8ff';  // Ensuring matrix rain is cyber blue
     ctx.font = fontSize + 'px monospace';
 
     for (let i = 0; i < drops.length; i++) {
