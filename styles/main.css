@@ -107,13 +107,15 @@ body {
     }
 
     .skills-container {
-        gap: 0.8rem;
+        gap: 1.5rem;
         margin: 1.5rem auto;
+        padding: 0 0.5rem;
     }
 
     .skill-category {
         width: 100%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 0.8rem;
     }
 
     .skill-category h4 {
@@ -124,6 +126,7 @@ body {
     .tech-tag {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
+        margin: 0.2rem;
     }
 
     .cyber-card {
@@ -221,10 +224,25 @@ body {
     .tech-tag {
         padding: 0.3rem 0.6rem;
         font-size: 0.75rem;
+        margin: 0.15rem;
     }
 
     .feature-item {
         font-size: 0.75rem;
+    }
+
+    .skills-container {
+        gap: 1rem;
+        margin: 1rem auto;
+    }
+
+    .skill-category {
+        padding: 0.6rem;
+    }
+
+    .skill-category h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
     }
 }
 
@@ -236,6 +254,22 @@ body {
     margin: 2rem auto;
     max-width: 800px;
     padding: 0 1rem;
+}
+
+.skill-category {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 168, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.skill-category h4 {
+    color: var(--cyber-blue);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px rgba(0, 168, 255, 0.3);
 }
 
 .tech-tag {
