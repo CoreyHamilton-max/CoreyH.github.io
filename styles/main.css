@@ -107,15 +107,14 @@ body {
     }
 
     .skills-container {
-        gap: 1.5rem;
+        gap: 2rem;
         margin: 1.5rem auto;
         padding: 0 0.5rem;
     }
 
     .skill-category {
         width: 100%;
-        margin-bottom: 1rem;
-        padding: 0.8rem;
+        margin-bottom: 1.5rem;
     }
 
     .skill-category h4 {
@@ -232,7 +231,7 @@ body {
     }
 
     .skills-container {
-        gap: 1rem;
+        gap: 1.5rem;
         margin: 1rem auto;
     }
 
@@ -250,7 +249,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 2rem auto;
     max-width: 800px;
     padding: 0 1rem;
@@ -259,10 +258,6 @@ body {
 .skill-category {
     width: 100%;
     margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: rgba(0, 168, 255, 0.05);
-    border-radius: 8px;
-    border: 1px solid rgba(0, 168, 255, 0.2);
 }
 
 .skill-category h4 {
