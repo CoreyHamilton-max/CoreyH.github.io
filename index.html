@@ -1,7 +1,174 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <canvas id="matrix-bg"></canvas>
+    
+    <div class="content-wrapper">
+        <div class="vignette-overlay"></div>
+        <h1 class="matrix-glow">ハッカー・ワールド</h1>
+        <p class="cyber-text">INITIALIZING PROJECT DATABASE...</p>
+        
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Travlr Project -->
+                <div class="col-lg-6 mb-4">
+                    <div class="cyber-card">
+                        <div class="card-glitch"></div>
+                        <h3>🌐 TRAVLR.SYS</h3>
+                        <div class="cyber-line"></div>
+                        <p class="project-desc">Full-stack travel platform utilizing Node.js and Express architecture. Implements RESTful design with separated API, admin, and server logic.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REST</span>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">// Responsive static pages</div>
+                            <div class="feature-item">// Express route handling</div>
+                            <div class="feature-item">// Structured backend</div>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="cyber-btn">DEPLOY<span class="glitch"></span></a>
+                            <a href="#" class="cyber-btn">SOURCE<span class="glitch"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grazioso Dashboard -->
+                <div class="col-lg-6 mb-4">
+                    <div class="cyber-card">
+                        <div class="card-glitch"></div>
+                        <h3>🐾 GRAZIOSO.DASH</h3>
+                        <div class="cyber-line"></div>
+                        <p class="project-desc">Interactive Python/Dash dashboard for animal rescue data visualization. Enables data-driven shelter operations through dynamic charts and maps.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Dash</span>
+                            <span class="tech-tag">Plotly</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">// Interactive visualizations</div>
+                            <div class="feature-item">// Geolocation mapping</div>
+                            <div class="feature-item">// Dynamic filtering</div>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="cyber-btn">LAUNCH<span class="glitch"></span></a>
+                            <a href="#" class="cyber-btn">SOURCE<span class="glitch"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SNHU Grocer -->
+                <div class="col-lg-6 mb-4">
+                    <div class="cyber-card">
+                        <div class="card-glitch"></div>
+                        <h3>🛒 GROCER.EXE</h3>
+                        <div class="cyber-line"></div>
+                        <p class="project-desc">C++ console application for product tracking and frequency analysis. Demonstrates STL implementation and file handling.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">STL</span>
+                            <span class="tech-tag">File I/O</span>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">// STL map implementation</div>
+                            <div class="feature-item">// OOP architecture</div>
+                            <div class="feature-item">// Data persistence</div>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="cyber-btn">EXECUTE<span class="glitch"></span></a>
+                            <a href="#" class="cyber-btn">SOURCE<span class="glitch"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secure Coding -->
+                <div class="col-lg-6 mb-4">
+                    <div class="cyber-card">
+                        <div class="card-glitch"></div>
+                        <h3>🔐 SECURE.SYS</h3>
+                        <div class="cyber-line"></div>
+                        <p class="project-desc">Comprehensive secure coding implementation focusing on vulnerability prevention and defensive programming practices.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">// SQL injection defense</div>
+                            <div class="feature-item">// Security documentation</div>
+                            <div class="feature-item">// Unit testing suite</div>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="cyber-btn">ACCESS<span class="glitch"></span></a>
+                            <a href="#" class="cyber-btn">SOURCE<span class="glitch"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XOR Encryption -->
+                <div class="col-lg-6 mb-4">
+                    <div class="cyber-card">
+                        <div class="card-glitch"></div>
+                        <h3>🔐 XOR.CRYPT</h3>
+                        <div class="cyber-line"></div>
+                        <p class="project-desc">File-based XOR encryption implementation demonstrating symmetric encryption principles and binary operations.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">File I/O</span>
+                            <span class="tech-tag">XOR Logic</span>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">// XOR encryption/decryption</div>
+                            <div class="feature-item">// File handling</div>
+                            <div class="feature-item">// Validation system</div>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="cyber-btn">DECRYPT<span class="glitch"></span></a>
+                            <a href="#" class="cyber-btn">SOURCE<span class="glitch"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Encryption -->
+                <div class="col-lg-6 mb-4">
+                    <div class="cyber-card">
+                        <div class="card-glitch"></div>
+                        <h3>🛡️ CRYPTO.SUITE</h3>
+                        <div class="cyber-line"></div>
+                        <p class="project-desc">Advanced encryption toolkit featuring multiple ciphers, SQLite logging, and modular architecture.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">CMake</span>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">// Multi-cipher support</div>
+                            <div class="feature-item">// Activity logging</div>
+                            <div class="feature-item">// CLI interface</div>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="cyber-btn">INITIALIZE<span class="glitch"></span></a>
+                            <a href="#" class="cyber-btn">SOURCE<span class="glitch"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/matrix.js"></script>
 </body>
 </html>

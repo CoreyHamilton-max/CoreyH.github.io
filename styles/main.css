@@ -1,0 +1,75 @@
+/* Add these styles to your existing CSS */
+
+.project-desc {
+    font-size: 0.9rem;
+    color: rgba(0, 255, 0, 0.8);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.feature-list {
+    margin: 1rem 0;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.85rem;
+}
+
+.feature-item {
+    color: rgba(0, 255, 0, 0.7);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.feature-item:hover {
+    color: rgba(0, 255, 0, 1);
+}
+
+.cyber-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--matrix-green);
+    text-shadow: 0 0 5px var(--matrix-green);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.card-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Enhanced hover effects */
+.cyber-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 30px rgba(0, 255, 0, 0.3);
+}
+
+.cyber-card:hover .feature-item {
+    color: rgba(0, 255, 0, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cyber-card {
+        margin: 1rem 0;
+    }
+    
+    .tech-stack {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card-links {
+        flex-direction: column;
+    }
+    
+    .cyber-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
